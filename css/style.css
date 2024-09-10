@@ -826,6 +826,10 @@ nav.scroll {
 a .button-mail .hour {
 	font-size: 18px;
 	padding:20px 0;}
+form p label {
+	white-space: nowrap;
+}
+
 
 
 

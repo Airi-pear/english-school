@@ -828,6 +828,7 @@ a .button-mail .hour {
 	padding:20px 0;}
 form p label {
 	white-space: nowrap;
+	display: inline-block;
 }
 
 
@@ -962,6 +963,9 @@ form p label {
 
 }
 @media (max-width: 600px) {
+	body{
+		  background-image: url(../img/sp-marble.jpg);
+	}
   .nav-menu {
 	height: 50vh;
   }

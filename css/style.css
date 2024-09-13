@@ -823,6 +823,8 @@ form p label {
   width: auto;
   z-index: -100;
   display: none;
+  top:0;
+ left:0;
 }
 .sp-back img {
   height: 100%;

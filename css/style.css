@@ -1,11 +1,9 @@
 @charset "utf-8";
-* {
+*,img {
   margin: 0;
   padding: 0;
 }
 img {
-  margin: 0;
-  padding: 0;
   vertical-align: bottom;
 }
 html {
@@ -22,24 +20,9 @@ body {
 }
 body {
   font-family: "M PLUS Rounded 1c", sans-serif;
-  font-weight: 400;
   font-style: normal;
 }
-.m-plus-rounded-1c-thin {
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-body {
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.m-plus-rounded-1c-bold {
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
+
 .nav-menu {
   color: #292929; /* メニューテキストの色 */
   width: 100%;
@@ -93,6 +76,7 @@ body {
   justify-content: left;
   padding-left: 5px;
 }
+
 .menu-item a:hover, .drop-menu-item a:hover {
   color: #4d82ff;
   transition: 0.5s;
@@ -115,6 +99,13 @@ body {
   z-index: 1;
   list-style: none;
 }
+.inner {
+  max-width: 1100px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 body header {
   width: 100%;
   height: 120px;
@@ -125,10 +116,7 @@ header h1 {
   max-width: 110px;
   margin: auto;
 }
-h1 a img {
-  width: 100%;
-  height: auto;
-}
+
 section {
   text-align: center;
   padding-bottom: 90px;
@@ -151,7 +139,7 @@ section {
 .specialh2 {
   margin-top: 60px;
 }
-figure img, .inner .map iframe {
+figure img, .inner .map iframe,h1 a img,li img {
   width: 100%;
   height: auto;
 }
@@ -172,13 +160,7 @@ h2 {
   display: inline-block;
   border-radius: 30px;
 }
-.inner {
-  max-width: 1100px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
+
 #school .inner .boxarea, .teacher_area, #achievement .boxarea {
   display: flex;
   justify-content: space-between;
@@ -208,24 +190,36 @@ body nav {
   width: 60%;
 }
 /* ---------------------------button----------------------------------- */
-.button-more {
-  font-size: 20px;
-  color: #fff;
-  letter-spacing: 1px;
-  padding: 13px 20px 13px;
+.button-more,.button-mail{
+	padding: 13px 20px 13px;
   outline: 0;
-  border: 1px solid #223a70;
-  cursor: pointer;
+	  cursor: pointer;
   position: relative;
   background-color: rgba(0, 0, 0, 0);
   user-select: none;
   touch-action: manipulation;
+	  margin-left: auto;
+  margin-right: auto;
+	
+}
+.button-more {
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+  border: 1px solid #223a70;
   z-index: 1;
   margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
+
 }
-.button-more:after {
+.button-mail {
+  font-size: 16px;
+  color: #292929;
+  letter-spacing: 1px;
+  border: 1px solid #292929;
+}
+
+
+.button-more:after,.button-mail:after {
   content: "";
   background-color: #223a70;
   width: 100%;
@@ -236,40 +230,17 @@ body nav {
   transition: 0.2s;
   z-index: -1;
 }
-.button-more:hover:after {
-  top: 0px;
-  left: 0px;
-}
-.button-mail {
-  font-size: 16px;
-  color: #292929;
-  letter-spacing: 1px;
-  padding: 13px 20px 13px;
-  outline: 0;
-  border: 1px solid #292929;
-  cursor: pointer;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0);
-  user-select: none;
-  touch-action: manipulation;
-  margin-left: auto;
-  margin-right: auto;
-}
 .button-mail:after {
-  content: "";
   background-color: #F2E6D8;
-  width: 100%;
-  position: absolute;
-  height: 100%;
-  top: 7px;
-  left: 7px;
-  transition: 0.2s;
   z-index: -10;
 }
-.button-mail:hover:after {
+
+.button-more:hover:after,.button-mail:hover:after {
   top: 0px;
   left: 0px;
 }
+
+
 #mail_borer {
   position: absolute;
   top: 50%;
@@ -282,6 +253,8 @@ body nav {
   text-align: center;
   margin-bottom: 30px;
 }
+
+
 #fee .inner .table-fee, .table-eiken {
   background-color: rgba(255, 255, 255, 1.00);
   max-width: 1000px;
@@ -304,23 +277,7 @@ body nav {
 #fee .inner .sp-table, em#spanime {
   display: none;
 }
-.square {
-  position: relative;
-  padding: 30px;
-  color: #353535;
-  background-color: #F2E6D8;
-  font-size: 18px;
-  text-align: center;
-  z-index: -2;
-  width: 400px;
-  margin: 0 auto;
-}
-.square:before {
-  position: absolute;
-  inset: -10px 10px 10px -10px;
-  border: 1px solid #292929;
-  content: '';
-}
+
 .lookat {
   width: 80%;
   margin-left: auto;
@@ -374,10 +331,7 @@ body footer {
 .text .copylight {
   font-size: 15px;
 }
-li img {
-  width: 100%;
-  height: auto;
-}
+
 #course h3 {
   position: relative;
   padding: 0.25em;
@@ -505,9 +459,7 @@ footer .text, footer .footer-text {
 }
 #about-school .about-text {
   text-align: center;
-  margin-top: 50px;
-  margin-right: auto;
-  margin-left: auto;
+  margin:50px auto 0;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -823,8 +775,8 @@ form p label {
   width: auto;
   z-index: -100;
   display: none;
-  top:0;
- left:0;
+	top:0;
+left:0;
 }
 .sp-back img {
   height: 100%;

@@ -1,0 +1,228 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+body {
+  color: #292929;
+  background: url(../img/marble-before.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+img {
+  vertical-align: bottom;
+  border-radius: 50px;
+  width: 100%;
+  height: auto;
+}
+
+.nav-menu, .menu-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.nav-menu {
+  color: #292929;
+}
+
+.menu-list {
+  max-width: 1100px;
+  list-style: none;
+  transition: 0.3s;
+}
+
+.menu-item {
+  border-left: 1px dashed #223a70;
+  position: relative;
+}
+
+.menu-item:first-child {
+  border-left: none;
+}
+
+.menu-item:hover .drop-menu-list {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.menu-item a, .drop-menu-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #292929;
+  height: 50px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.menu-item a:hover, .drop-menu-item a:hover {
+  color: #4d82ff;
+  transition: 0.5s;
+}
+
+.drop-menu-list {
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  list-style: none;
+}
+
+header, section, .inner, footer {
+  width: 100%;
+  text-align: center;
+}
+
+header {
+  height: 120px;
+  padding-top: 10px;
+}
+
+h1 {
+  max-width: 110px;
+  margin: auto;
+}
+
+.main-img {
+  width: 80%;
+  max-width: 1200px;
+  margin: 30px auto;
+  position: relative;
+  z-index: -3;
+  aspect-ratio: 2 / 1;
+}
+
+.specialh2 {
+  margin-top: 60px;
+}
+
+h2 {
+  font-size: 24px;
+  padding: 15px 40px;
+  background: #fff;
+  border-radius: 30px;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+#about-course, #school, .teacher_area, #achievement {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#about-course .box {
+  width: 400px;
+  margin-bottom: 50px;
+}
+
+.button-more, .button-mail {
+  padding: 13px 20px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  border: 1px solid;
+  cursor: pointer;
+  position: relative;
+  margin: 30px auto;
+}
+
+.button-more {
+  color: #fff;
+  border-color: #223a70;
+}
+
+.button-mail {
+  color: #292929;
+  border-color: #292929;
+}
+
+.button-more:after, .button-mail:after {
+  content: "";
+  background-color: #223a70;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s;
+  z-index: -1;
+}
+
+.button-more:hover:after, .button-mail:hover:after {
+  top: 0;
+  left: 0;
+}
+
+#mail_borer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 70%;
+  z-index: -1;
+}
+
+.mailer {
+  margin-bottom: 30px;
+}
+
+.experience-textbox {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.footer-logo {
+  width: 100px;
+}
+
+.copylight {
+  font-size: 15px;
+}
+
+.marker {
+  background: linear-gradient(transparent 50%, rgba(241, 194, 27, 0.7) 50%);
+  display: inline;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 1.5s;
+  font-size: 22px;
+}
+
+.marker.on {
+  background-size: 100% 100%;
+}
+
+nav.scroll {
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  height: 50px;
+  transition: 0.5s;
+  box-shadow: 0 3px 5px rgba(187, 187, 187, 1);
+}
+
+hr {
+  height: 20px;
+  background: repeating-linear-gradient(45deg, #fff 0, #4d82ff 1px, transparent 0, transparent 50%);
+  background-size: 20px 20px;
+  color: #4d82ff;
+  width: 600px;
+  margin: 40px auto 30px;
+}
